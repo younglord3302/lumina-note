@@ -1,0 +1,48 @@
+{
+  "name": "lumina-backend",
+  "version": "1.0.0",
+  "description": "Backend API for a modern notes application with real-time sync",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build": "echo 'No build step required for backend'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "echo 'No linter configured'",
+    "predeploy": "npm run build",
+    "deploy": "npm start"
+  },
+  "keywords": [
+    "notes",
+    "api",
+    "express",
+    "mongodb",
+    "sync",
+    "real-time"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/notes-app"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/notes-app/issues"
+  },
+  "homepage": "https://github.com/yourusername/notes-app#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}

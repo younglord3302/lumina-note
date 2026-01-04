@@ -1,0 +1,52 @@
+{
+  "name": "lumina-notes",
+  "version": "1.0.0",
+  "description": "A modern, full-stack notes application with markdown support and real-time sync",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "start": "npm run start:backend",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm run preview",
+    "lint": "npm run lint:frontend",
+    "lint:frontend": "cd frontend && npm run lint",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "clean": "rm -rf backend/node_modules frontend/node_modules node_modules",
+    "deploy": "npm run build && npm run start"
+  },
+  "keywords": [
+    "notes",
+    "markdown",
+    "react",
+    "express",
+    "mongodb",
+    "full-stack",
+    "real-time"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/notes-app"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/notes-app/issues"
+  },
+  "homepage": "https://github.com/yourusername/notes-app#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ]
+}
