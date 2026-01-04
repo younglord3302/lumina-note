@@ -244,6 +244,7 @@ export const NoteEditor: React.FC<NoteEditorProps> = ({ note, onSave, onChange, 
 
         {editorType === 'rich_text' && (
           <div className="flex-1 flex flex-col bg-white p-4">
+             {/* @ts-ignore - ReactQuill types issue with React 18+ */}
              <ReactQuill value={content} onChange={handleQuillChange} className="h-full flex flex-col" theme="snow" />
           </div>
         )}
